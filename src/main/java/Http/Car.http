@@ -33,3 +33,11 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:8080/motor/1
+
+###
+GET http://localhost:8080/car/2
+
+
+###
+GET http://localhost:8080/motor/versuch/1
+

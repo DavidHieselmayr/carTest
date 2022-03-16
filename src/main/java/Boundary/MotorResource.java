@@ -56,4 +56,17 @@ public class MotorResource {
             return Response.serverError().build();
         }
     }
+
+    @GET
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Path("/versuch/{id}")
+    public Response versuch(@PathParam("id") Long id) {
+        try {
+            Motor motor = this.motorRepository.findById(id);
+            return Response.ok(this.motorRepository.findById(id)).build();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
 }

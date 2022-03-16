@@ -14,6 +14,6 @@ public class Motor extends PanacheEntity implements Serializable {
     public String bezeichnung;
     public int serialNumber;
 
-    @OneToMany(mappedBy = "motor", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "motor")
     public List<Car> cars;
 }

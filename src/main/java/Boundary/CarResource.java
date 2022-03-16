@@ -44,5 +44,18 @@ public class CarResource {
         }
     }
 
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/{id}")
+    public Car getCar(@PathParam("id") Long id) {
+        try {
+            Car car = this.carRepository.findById(id);
+            return car;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+
+    }
 
 }
